@@ -97,7 +97,7 @@ app.listen(PORT, function () {
 
 const bot = new SlackBot({
   //Bot token from slack app console
-  token: 'xoxb-520780954817-523184333009-ts90VvByq7SpvvUVqnSNCbEm',
+  token: 'xoxb-520780954817-523184333009-48DtBwEyw34Rhwd3aw3aCPST',
   name: 'sikandar-bot'
 });
 
@@ -130,7 +130,7 @@ function single_message(channel, fall, ts, bot_name, colr) {
 
   var api = 'https://slack.com/api/chat.postMessage?';
   // Add token from Slack apps console
-  var token = 'token=xoxp-520780954817-523176800977-536184602912-d89a6b57c51615e106a7932840565d8c&';
+  var token = 'token=xoxp-520780954817-523176800977-537125288133-cb2d9ea6cb5978dcb29d10187c47d31f&';
   var channel_id = 'channel=' + channel + '&';
   var thread_tss = 'thread_ts=' + ts + '&';
   var text = 'text=' + escaped_str + '&';
@@ -151,7 +151,7 @@ function bot_info(bot_id) {
   // console.log(bot_id);
   return new Promise(function (resolve, reject) {
 
-    request('https://slack.com/api/bots.info?token=xoxp-520780954817-523176800977-536184602912-d89a6b57c51615e106a7932840565d8c&bot=' + bot_id + '&pretty=1', function (error, response, body) {
+    request('https://slack.com/api/bots.info?token=xoxp-520780954817-523176800977-537125288133-cb2d9ea6cb5978dcb29d10187c47d31f&bot=' + bot_id + '&pretty=1', function (error, response, body) {
       if (!error && response.statusCode == 200) {
 
         var info = JSON.parse(body);
